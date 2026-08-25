@@ -8,7 +8,7 @@ Provisions AWS Managed Microsoft AD (Directory Service) for LDAP/Kerberos authen
 
 ## Stable ref
 ```
-source = "github.com/ajaylakma/aj-tf-module-directory?ref=directory-01"
+source = "github.com/ajay-infra/aj-tf-module-directory?ref=v1.0.0"
 ```
 
 ## Key inputs
@@ -23,11 +23,13 @@ source = "github.com/ajaylakma/aj-tf-module-directory?ref=directory-01"
 | `domain_short_name` | NetBIOS short name |
 
 ## AWS tags applied
-`Env`, `Team`, `ManagedBy`, `CostCenter`, `Model`, `Customer`
+`Project`, `ManagedBy`, `Repository`, `Environment`, `Team`, `CostCenter` (set in
+`locals.full_tags`), plus whatever's in `var.tags`. No `Env`, `Model`, or `Customer`
+tag exists in this module.
 
 ## Branching convention
 - `main` — active development
-- `directory-01` — stable pinned release
+- semver tags (`v1.0.0`, ...) — stable pinned releases, per `README.md` usage examples
 
 ## CI checks
 fmt, validate, plan (dry-run), tfsec/checkov
