@@ -52,7 +52,7 @@ Applied once per account tier (central-nonprod manages dev+staging; central-prod
 
 ```hcl
 module "directory" {
-  source = "github.com/ajay-infra/aj-tf-module-directory?ref=v0.1.0"
+  source = "github.com/ajay-infra/aj-tf-module-directory?ref=v1.0.0"
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnet_ids
@@ -162,6 +162,6 @@ Source is `allowed_cidrs` — set to your Client VPN client CIDR + management VP
 
 | Tool | Version |
 |---|---|
-| Terraform | `= 1.7.5` |
+| Terraform | `= 1.10.5` |
 | AWS provider | `= 5.100.0` |
 | random provider | `= 3.6.3` |
