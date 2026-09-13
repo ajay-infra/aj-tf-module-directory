@@ -24,5 +24,5 @@ enable_dhcp_options = true
 # Secret recovery
 secret_recovery_window_days = 7
 
-team        = "team-0001"   # a team code — aj-infra/envs/org/teams.yaml
+team        = "team-0001" # a team code — aj-infra/envs/org/teams.yaml
 cost_center = "infra-2026-q1"
